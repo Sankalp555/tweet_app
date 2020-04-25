@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  host: localhost
+
+development:
+  <<: *default
+  database: demo_tweet_application
+
+test:
+  <<: *default
+  database: demo_tweet_application_test
+
+production:
+  <<: *default
